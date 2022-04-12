@@ -1,7 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
 
+import React,{useState} from 'react';
+import ExpiredClosure from './components/ExpiredClosure'
+
 function App() {
+  let [kun,setKun] = useState({})
+  // let getFun = Promise.resolve(2);
+  // getFun.then((res)=>{
+  //   setKun(res);
+  //   console.log(res);
+  // })
+  setTimeout(() => {
+    //setKun({});
+    console.log(19999);
+  }, 5000);
+
+ 
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +33,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <ExpiredClosure/>
     </div>
   );
 }
